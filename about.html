@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>King & Co. Advocates</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Swiper.js styles -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+  <header>
+    <div class="top-nav">
+      <div class="logo">King & Co. Advocates</div>
+      <div class="top-nav-links">
+        <a href="about.html">About</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../services.html">Practice Areas</a></li>
+        <li class="dropdown">
+          <a href="#">Our Team <i class="fa-solid fa-caret-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="admin-team.html">Administrative Team</a></li>
+            <li><a href="associates.html">Associates</a></li>
+            <li><a href="senior-associates.html">Senior Associates</a></li>
+            <li><a href="partners.html">Partners</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    
+  </header>
+
+  <section class="page-hero about-hero" data-aos="fade-in">
+    <div class="hero-text">
+      <h1>About Us</h1>
+      <p>Integrity. Dedication. Justice.</p>
+    </div>
+  </section>
+
+  <section class="about-overview" data-aos="fade-up">
+    <div class="container">
+      <h2>Who We Are</h2>
+      <p>King & Co. Advocates is a full-service law firm based in Kigali, Rwanda. With a team of dedicated professionals, we deliver legal solutions grounded in experience, innovation, and strategic thinking.</p>
+    </div>
+  </section>
+
+  <section class="mission-vision-values" data-aos="fade-up">
+    <div class="container">
+      <div class="box">
+        <h3>Our Mission</h3>
+        <p>To provide excellent and reliable legal services that uphold justice and empower clients to thrive.</p>
+      </div>
+      <div class="box">
+        <h3>Our Vision</h3>
+        <p>To be a benchmark law firm in Africa, known for shaping legal discourse and achieving precedent-setting results.</p>
+      </div>
+      <div class="box">
+        <h3>Our Values</h3>
+        <ul>
+          <li>Integrity</li>
+          <li>Confidentiality</li>
+          <li>Client-Centeredness</li>
+          <li>Excellence</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="history-team" data-aos="fade-up">
+    <div class="container">
+      <div class="history">
+        <h2>Our Story</h2>
+        <p>Founded in 2010 by Senior Advocate Jean Abayo, our firm has grown into a dynamic team with experience in litigation, arbitration, corporate law, and human rights. We are proud of our legacy of trust and our forward-looking approach.</p>
+      </div>
+      <div class="team-highlight">
+        <h2>Meet the Team</h2>
+        <p>We are a diverse, multilingual, and professional team committed to upholding justice and empowering communities.
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" data-aos="zoom-in">
+    <h2>Ready to Work With Us?</h2>
+    <a href="contact.html" class="btn-primary">Schedule a Consultation</a>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <h2>King & Co. Advocates</h2>
+        <p>Committed to Excellence in Legal Representation</p>
+      </div>
+      <div class="footer-nav">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Practice Areas</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:burabyogift1@gmail.com">burabyogif1@gmail.com</a></p>
+        <p>Phone: +250 123 456 789</p>
+        <p>Address: Norskeen, Nyarugenge, Kigali</p>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+    
+    <!-- Add the Newsletter Form Below the Footer Navigation -->
+     
+    <div class="footer-newsletter">
+      <section class="newsletter-signup" data-aos="fade-up">
+        <div class="newsletter-container">
+          <h3 style="color: white;">Stay Updated with Our Latest Insights</h3>
+          <p>Sign up for our newsletter and get exclusive updates from King & Co. Advocates.</p>
+          <form action="https://formsubmit.co/burabyogift1@gmail.com" method="POST" class="newsletter-form">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/thank-you.html">
+            <button type="submit">Subscribe</button>
+          </form>
+          
+          
+          <p class="success-message" id="successMessage" style="display:none;">Thank you for subscribing!</p>
+        </div>
+      </section>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 King & Co. Advocates. All rights reserved.</p>
+      <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="newsletter.js"></script>
+
+</body>
+</html>
