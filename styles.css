@@ -42,6 +42,7 @@ body {
   background-color: #fff;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
+  overflow: visible;
 }
 
 .main-nav ul {
@@ -65,8 +66,52 @@ body {
 .main-nav ul li a:hover {
   color: #e39a38; /* Gold shade */
 }
+/* General dropdown styles */
+/* Ensure parent is positioned */
+.dropdown {
+  position: relative;
+}
 
-/* Hero Section with Swiper */
+/* Fix the dropdown menu from overflowing */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  right: auto;
+  background-color: #111;
+  z-index: 999;
+  display: none;
+  min-width: 200px;
+  max-width: 90vw; /* keep within screen */
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  white-space: normal; /* allow wrapping */
+  transform: translateX(-50%);
+}
+
+/* Show dropdown on hover (or toggle if using JS) */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    min-width: unset;
+  }
+
+
+
+  .dropdown-menu li a {
+    padding-left: 20px;
+    white-space: normal;
+  }
+}
+
 .hero {
   position: relative;
   height: 100vh;
@@ -74,46 +119,65 @@ body {
   overflow: hidden;
 }
 
-.swiper {
+.swiper-container {
   height: 100%;
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.swiper-wrapper {
+  height: 100%;
+}
+
+.swiper-slide {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .swiper-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   object-fit: cover;
-  opacity: 0.7;
+  opacity: 0.6;
+  z-index: -1;
 }
 
 .hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  color: white;
   text-align: center;
+  color: white;
+  padding: 1rem;
+  max-width: 90%;
+  z-index: 1;
 }
 
 .hero-content h1 {
   font-family: 'DM Serif Display', serif;
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .hero-content p {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .btn-primary {
   background-color: #e39a38;
-  color: #fff;
-  padding: 12px 30px;
-  font-size: 1.1rem;
+  color: white;
+  padding: 10px 25px;
+  font-size: 1rem;
   border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
@@ -121,24 +185,45 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #d4892e; /* Darker gold */
+  background-color: #d4892e;
 }
 
-/* Swiper Controls */
+/* Swiper navigation and pagination */
 .swiper-button-next,
 .swiper-button-prev {
   color: #fff;
-  font-size: 2rem;
 }
 
 .swiper-pagination-bullet {
   background-color: #e39a38;
-  opacity: 0.8;
 }
 
 .swiper-pagination-bullet-active {
   background-color: #d4892e;
 }
+
+/* Responsive tweaks */
+@media (min-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .btn-primary {
+    font-size: 1.1rem;
+  }
+}
+
+/* Remove any margin or padding that causes gaps after hero */
+.hero + * {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+
 
 /* Intro Section */
 .intro {
